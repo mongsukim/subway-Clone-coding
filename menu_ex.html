@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서브웨이 메뉴</title>
+  <script src="js/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+  <script src="js/main.js"></script> 
+  
+  <link rel="stylesheet" href="css/style_menu.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;display=swap"
+      rel="stylesheet"/>
+      <script src="js/TweenMax.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <section id="section2">
+      <div class="subway_menu">
+        <h3>샌드위치</h3>
+        <!-- <div class="subway_menu_depth">
+          <ul>
+            <li><a href="">샌드위치</a></li>
+            <li><a href="">랩·기타</a></li>
+            <li><a href="">찹샐러드</a></li>
+            <li><a href="">스마일 썹</a></li>
+            <li><a href="">단체메뉴</a></li>
+          </ul>
+        </div> -->
+      </div>
+      <div class="menu">
+        <div class="form_select">
+          <select>
+            <option value="all" selected="selected">All</option>
+            <option value="cl">클래식</option>
+            <option value="fl">프레쉬&라이트</option>
+            <option value="pm">프리미엄</option>
+            <option value="bf">아침메뉴</option>
+            <option value="topping">추가 선택</option>
+          </select>
+        </div>
+        <div class="menu_wrap">
+          <ul>
+            <li class="pm">
+              <div class="label">
+                <span class="new">NEW</span>
+              </div>
+              <div class="img">
+                <img src="images/sandwich_pm15.png">
+              </div>
+              <strong class="tit">치지 갈릭 미트볼</strong>
+              <span class="eng">Cheesy Garlic Meatball</span>
+              <span class="cal">558 kcal</span>
+            </li>
+            <li class="pm">
+              <div class="label">
+                <span class="new">NEW</span>
+              </div>
+              <div class="img">
+                <img src="images/sandwich_pm13.jpg">
+              </div>
+              <strong class="tit">K-바비큐</strong>
+              <span class="eng">K-BBQ</span>
+              <span class="cal">378 kcal</span>
+            </li>
+            <li class="fl">
+              <div class="img">
+                <img src="images/sandwich_fl01.jpg">
+              </div>
+              <strong class="tit">로티세리 바비큐 치킨</strong>
+              <span class="eng">Rotisserie Barbecue Chicken</span>
+              <span class="cal">350 kcal</span>
+            </li>
+            <li class="cl">
+              <div class="img">
+                <img src="images/sandwich_cl06.jpg">
+              </div>
+              <strong class="tit">에그마요</strong>
+              <span class="eng">Egg Mayo</span>
+              <span class="cal">480 kcal</span>
+            </li>
+            <li class="bf">
+              <div class="img">
+                <img src="images/sandwich_bf01.jpg">
+              </div>
+              <strong class="tit">햄, 에그&치즈 </strong>
+              <span class="eng">Ham, Egg & Cheese</span>
+              <span class="cal">400 kcal</span>
+            </li>
+            <li class="topping">
+              <div class="label">
+                <span class="season">SEASON</span>
+              </div>
+              <div class="img">
+                <img src="images/img_toppping_12.png">
+              </div>
+              <strong class="tit">갈릭 버터 </strong>
+              <span class="eng">Garlic Butter</span>
+              <div class="summary">
+                <p>
+                  마늘향 가득 부드러운 갈릭버터로<br>
+                  샌드위치 풍미 업업
+                </p>
+                <p class="fs13">
+                  15cm:1000원 / 30cm: 2000원
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div> <!--메뉴목록 -->
+    </section>
+    
+  </div>
+</body>
+
+
+
+<script>
+
+ function pdTab_Sort(){
+    $('.form_select > select').on('change', function(){
+        var val = $(this).find("option:selected").val();
+        var eft = Power4.easeInOut;
+        var spd = 0.5;
+
+        TweenLite.to($('.menu ul li'),spd,{ease:eft,opacity:0,scale:0.8});
+        setTimeout(function(){
+            if(val == 'all'){
+                    TweenLite.to($('.menu ul li').show(),spd,{ease:eft,opacity:1,scale:1})
+            }else{
+                $('.menu ul li').each(function(){
+                    var $this = $(this);
+                    if($this.hasClass(val)){
+                        $this.show();
+                        TweenLite.to($this,spd,{ease:eft,opacity:1,scale:1})
+                    }else{
+                        $this.hide();
+                    }
+                })
+            }
+        },400)
+    })
+  }
+
+
+
+
+</script>  
+
+
+
+</html>

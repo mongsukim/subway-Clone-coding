@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단체주문</title>
+  <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/jquery-ui-1.12.0.min.js"></script>
+  <script src="js/jquery.easing.1.3.min.js"></script>
+
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+  <script src="js/jquery.blockUI.min.js"></script>
+
+  <script src="js/TweenMax.min.js"></script>
+
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/ui.common.js"></script> 
+  <script src="js/subway.common.js"></script>
+  <script src="js/subway.pagination.js"></script>
+  <script src="js/jsrender.js"></script>
+  <script src="js/waffle.utils.js"></script>
+  <script src="js/main.js"></script> 
+  <link rel="stylesheet" href="css/style_menu.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;display=swap"
+      rel="stylesheet"/>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      
+      <div class="content">
+        <h1 class="sub_title" href="/">이용방법</h1>
+        <div class="menu_mov">
+          <a href="javascript:;" class="prev_btn"></a>
+          <a href="javascript:;" class="m_btn"></a>
+        </div>
+      </div>
+      <div class="sidemenu">
+        <div class="sidemenu_top">
+          <div class="s_util">
+            <a class="s_logo" href="#">
+              <img src="images/logo_sidemenu.png" alt="">
+            </a>
+            <div class="right">
+              <a class="setting" href=""><img src="images/icon_setting.png" alt="">
+              </a>
+              <a class="exit" href="javascript:;"><img src="images/icon_sidemenu_close_02.png" alt="">
+              </a>
+            </div>
+          </div>
+          <span class="info">로그인 해주세요.<br>아직 회원이 아니신가요?</span>
+          <div class="login">
+            <a class="login_btn" href="#">로그인</a>
+            <a class="join_btn" href="#">회원가입</a>
+          </div>
+        </div> <!--초록부분끝 -->
+        <div class="quick">
+          <ul>
+            <li>
+              <a href="appdown.html">
+              <img src="images/quick_01_fast.png" alt="">
+              <span>FAST-SUB</span>
+              </a>
+            </li>
+            <li>
+              <a href="appdown.html">
+              <img src="images/quick_02_home.png" alt="">
+              <span>HOME-SUB</span>
+            </a>
+          </li>
+          <li>
+            <a href="appdown.html">
+              <img src="images/quick_03_group.png" alt="">
+              <span>단체주문</span>
+            </a>
+          </li>
+            <li><a href="javascript:;">
+              <img src="images/quick_04_subcard.png" alt="">
+              <span>써브카드</span>
+  
+            </a></li>
+            <li><a href="javascript:;">
+              <img src="images/quick_05_gift.png" alt="">
+              <span>쿠폰</span>
+  
+            </a></li>
+            <li><a href="javascript:;">
+              <img src="images/quick_06_coupon.png" alt="">
+              <span>e-Gift</span>
+            </a></li>
+          </ul>
+        </div>
+        <div class="menulist">
+          <ul>
+            <li>
+              <a href="javascript:;" class="dp1"><img src="images/icon_app_gnb_menu.png" alt="">
+              <span>메뉴소개</span>
+              </a>
+              <div class="dp2">
+                <ul>
+                  <li>
+                    <a href="">샌드위치</a>
+                  </li>
+                  <li>
+                    <a href="">랩 기타</a>
+                  </li>
+                  <li>
+                    <a href="">챱샐러드</a>
+                  </li>
+                  <li>
+                    <a href="">스마일 썹</a>
+                  </li>
+                  <li>
+                    <a href="">단체메뉴</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" class="dp1"><img src="images/icon_app_gnb_howto.png" alt="">
+              <span>이용방법</span>
+              </a>
+              <div class="dp2">
+                <ul>
+                  <li>
+                    <a href="">써브웨이 이용방법</a>
+                  </li>
+                  <li>
+                    <a href="">단체메뉴 이용방법</a>
+                  </li>
+                  <li>
+                    <a href="">신선한 재료 소개</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" class="dp1"><img src="images/icon_app_gnb_news.png" alt="">
+              <span>새소식</span>
+              </a>
+              <div class="dp2">
+                <ul>
+                  <li>
+                    <a href="">이벤트 프로모션</a>
+                  </li>
+                  <li>
+                    <a href="">뉴스 공지사항</a>
+                  </li>
+                  <li>
+                    <a href="">광고영상</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" class="dp1"><img src="images/icon_app_gnb_subway.png" alt="">
+              <span>써브웨이</span>
+              </a>
+              <div class="dp2">
+                <ul>
+                  <li>
+                    <a href="">써브웨이 역사</a>
+                  </li>
+                  <li>
+                    <a href="">써브웨이 약속</a>
+                  </li>
+                  <li>
+                    <a href="">매장찾기</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" class="dp1"><img src="images/icon_app_gnb_store.png" alt="">
+              <span>가맹점</span>
+              </a>
+              <div class="dp2">
+                <ul>
+                  <li>
+                    <a href="">써브웨이 프랜차이즈</a>
+                  </li>
+                  <li>
+                    <a href="">가맹관련 FAQ</a>
+                  </li>
+                  <li>
+                    <a href="">지사안내</a>
+                  </li>
+                  <li>
+                    <a href="">사업설명회(대표번호 02-797-5036)</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" class="dp1"><img src="images/icon_app_gnb_customer.png" alt="">
+              <span>고객센터</span>
+              </a>
+              <div class="dp2">
+                <ul>
+                  <li>
+                    <a href="">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="">1:1문의</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="container">
+      <!-- <div class="sub_loc">
+        <h2>단체메뉴 이용방법</h2>
+        <div class="dp2_layer">
+          <ul>
+            <li><a href="">써브웨이 이용방법</a></li>
+            <li><a href="">단체메뉴 이용방법</a></li>
+            <li><a href="">신선한 재료 소개</a></li>
+          </ul>
+        </div>
+      </div> -->
+      <div class="order_area">
+        <div class="order_top">
+          <h2 class="h2_tit">특별한 날엔 써브웨이와 함께!</h2>
+          <div class="swiper-container c1">
+            <div class="swiper-pagination btn1"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3 class="order_tit">Special Day</h3>
+                <span class="order_desc">
+                  생일 파티, 홈파티 등<br>
+                  다양한 파티에 즐거움과 행복을 더해줄<br>
+                  써브웨이 샌드위치
+                </span>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="order_tit">Travel Day</h3>
+                <span class="order_desc">
+                  설레는 여행에 빠질 수 없는 먹는 즐거움!<br>
+                  써브웨이 샌드위치와 함께 한다면 여행의<br>
+                  추억이 배가 됩니다.
+                </span>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="order_tit">Metting Day</h3>
+                <span class="order_desc">
+                  바쁜 회의에서 간편하고 건강하게!<br>
+                  써브웨이 샌드위치와 함께라면 활기차고<br>
+                  든든한 회의가 됩니다.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order_bottom">
+          <div class="swiper-container c2">
+            <h2 class="bottom_tit">단체메뉴 주문하기</h2>
+            <div class="swiper-pagination btn2"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p class="icon01"></p>
+                <strong class="step">STEP 1</strong>
+                <h3 class="bottom_tit">
+                  메뉴 선택
+                </h3>
+                <p class="bottom_desc">
+                  샌드위치 10개 이상 주문시 또는<br>
+                  원하는 단체 메뉴를 선택하세요
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <p class="icon02"></p>
+                <strong class="step">STEP 2</strong>
+                <h3 class="bottom_tit">
+                  매장 문의
+                </h3>
+                <p class="bottom_desc">
+                  가까운 매장으로 문의해주세요.<br>
+                  최소 1일전 매장에 문의해주세요.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <p class="icon03"></p>
+                <strong class="step">STEP 3</strong>
+                <h3 class="bottom_tit">
+                  매장 픽업
+                </h3>
+                <p class="bottom_desc">
+                  주문 약속 날짜, 시간에<br>
+                매장에서 픽업하세요
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="order_btn">
+            <a href="">단체메뉴 보기</a>
+            <a href="">매장찾기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="util">
+        <ul>
+          <li><a href="javascript:;">이용약관</a></li>
+          <li><a href="javascript:;">
+            <strong>개인정보처리방침</strong></a></li>
+          <li><a href="javascript:;">Subway Listens</a></li>
+          <li><a href="javascript:;">PC버전</a></li>
+        </ul>
+      </div>
+      <div class="sns">
+        <a href="javascript:;"><img src="images/icon_f_sns_ig.png" alt=""></a>
+        <a href="javascript:;"><img src="images/icon_f_sns_fb.png" alt=""></a>
+      </div>
+      <div class="address">
+        <span>
+          서울시 서초구 강남대로 535 프린스빌딩 15층<br>
+          대표 : 콜린클락 | 전화 : 02-797-5036<br>
+          사업자등록번호 : 101-84-04143<br>
+        </span>
+        <p class="copyright">
+          SUBWAY® is a Registered Trademark of Subway IP LLC. © 2019 Subway IP LLC. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </div>
+  
+  
+
+  <script>
+
+
+var mySwiper = new Swiper('.c1', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay:
+   {
+     delay: 3000,
+   },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    
+  },
+})
+
+
+var mySwiper = new Swiper('.c2', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay:
+   {
+     delay: 3000,
+   },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+    return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  },
+})
+
+    $(function(){
+            $('.m_btn').click(function(){
+                $('.m_btn').toggleClass('on');
+                $('.sidemenu').toggleClass('on');
+            });
+            
+            $('.dp1').click(function(){
+               $(this).next().slideToggle().parent().siblings().find('.dp2').slideUp();
+                $(this).parent().toggleClass('on').siblings().removeClass('on');
+
+            });
+            $('.exit').click(function(){
+              $('.sidemenu').removeClass('on');
+            });
+              
+        })
+
+
+    $(document).ready(function() {
+	        pdTab_Sort()//메뉴소개 : 메뉴 정렬
+	        eventBanner()//메뉴소개 : 이벤트배너
+	    })
+
+	    function view(no){
+			location.href = "./eventView?eventIdx="+no+"&query=page%3D1%26eventState%3D";
+	    }
+	
+  </script>
+
+</body>
+
+
+
+
+
+</html>
